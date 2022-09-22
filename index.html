@@ -155,19 +155,19 @@
         </div>
       </div>
       <div class="container">
-        <form action="action_page.php">
+        <form autocomplete=off action="https://sheetdb.io/api/v1/3i19nlmvmisec" method="POST" id="sheetdb-form">
       
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          <label for="First name">First Name</label>
+          <input type="text" id="First name" name="data[First name]" placeholder="Your name..">
       
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          <label for="Last name">Last Name</label>
+          <input type="text" id="Last name" name="data[Last name]" placeholder="Your last name..">
 
-          <label for="mail">Email</label>
-          <input type="text" id="mail" name="Email" placeholder="Your Email..">
+          <label for="Email">Email</label>
+          <input type="text" id="Email" name="data[Email]" placeholder="Your Email..">
       
           <label for="Choose">Choose:</label>
-          <select id="country" name="Choose">
+          <select id="type" name="data[Type]">
             <option value="student">Student</option>
             <option value="parent">Parent</option>
             <option value="teacher">Teacher</option>
@@ -175,7 +175,7 @@
           </select>
       
           <label for="subject">Subject</label>
-          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          <textarea id="subject" name="data[subject]" placeholder="Write something.." style="height:200px"></textarea>
       
           <input type="submit" value="Submit">
       
@@ -206,6 +206,22 @@
   </section>
   <!-- End Footer -->
   <script src="./app.js"></script>
+  <script>
+    var form = document.getElementById('sheetdb-form');
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  fetch(form.action, {
+      method : "POST",
+      body: new FormData(document.getElementById("sheetdb-form")),
+  }).then(
+      response => response.json()
+  ).then((html) => {
+    // you can put any JS code here
+    window.open('done.html', '_blank');
+
+  });
+});
+</script>
 </body>
 
 </html>
