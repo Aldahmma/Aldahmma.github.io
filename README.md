@@ -12,6 +12,6 @@
 
 [![Contribution Stats](https://github-contribution-stats.vercel.app/api/?username=Aldahmaa)](https://github.com/LordDashMe/github-contribution-stats/)
 
-[![My Skills](https://skillicons.dev/icons?i=py,css,html,js,vscode,godot&perline=4)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=py,css,html,js,vscode,figma&perline=4)](https://skillicons.dev)
 
 
