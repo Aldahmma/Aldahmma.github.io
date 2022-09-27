@@ -726,9 +726,6 @@ input[type=text], select, textarea {
   input[type=submit]:hover {
 	background-color: crimson;
   }
-  body {
-	overflow: overlay;
-  }
 
   ::-webkit-scrollbar {
 	background: transparent;
@@ -742,4 +739,8 @@ input[type=text], select, textarea {
   ::-webkit-scrollbar-corner {
 	border-radius: 10px;
 	background: lightgrey;
+  }
+
+  body {
+	overflow: overlay;
   }
